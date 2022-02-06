@@ -1,0 +1,83 @@
+[module/user]
+type = custom/script
+
+label = "%{T3}%output%"
+foreground = ${colors.primary}
+
+exec = echo $(whoami)@$(hostname)
+interval = 90
+
+click-left = xfce4-terminal
+
+[module/workspaces]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = false
+
+label-focused = "%{T3}%index% - %name%"
+label-focused-padding = 1
+label-focused-margin = 0.5
+label-focused-foreground = ${colors.primary}
+label-focused-underline = ${colors.selected}
+
+label-unfocused = "%index%"
+label-unfocused-padding = 2
+label-unfocused-margin = 0.5
+label-unfocused-foreground = ${colors.secondary}
+label-unfocused-underline = ${colors.transparent}
+
+label-urgent = "%index%"
+label-urgent-padding = 2
+label-urgent-margin = 0.5
+label-urgent-foreground = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+
+[module/workspace]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+
+enable-click = false
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+
+label-focused = "%{T3}%index% - %name%"
+label-focused-padding = 1
+label-focused-margin = 0.5
+label-focused-foreground = ${colors.primary}
+label-focused-underline = ${colors.selected}
+
+label-unfocused = ""
+label-unfocused-padding = 0
+label-unfocused-margin = 0
+
+label-urgent = ""
+label-urgent-padding = 0
+label-urgent-margin = 0
+
+
+[module/date]
+type = internal/date
+interval = 1
+
+foreground = ${colors.primary}
+
+date = ""
+date-alt = "%Y-%m-%d "
+
+time = %H:%M:%S
+time-alt = %H:%M:%S
+
+label = "%{T3}%date%%time%"
+
+; vim:ft=dosini

@@ -1,0 +1,8 @@
+[colors]
+primary = #ffffff
+secondary = #c9c9c9
+selected = #ffb52a
+alert = #e60053
+transparent = #00000000
+
+; vim:ft=dosini
